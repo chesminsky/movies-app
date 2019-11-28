@@ -2,8 +2,8 @@
 
 	<mat-card-header>
 		<mat-card-title>
-            Find you movie
-        </mat-card-title>
+			Find you movie
+		</mat-card-title>
 	</mat-card-header>
 
 	<mat-card-content>
@@ -12,7 +12,7 @@
 			<div class="grid">
 
 				<div class="grid__item">
-					<mat-form-field class="fluid">
+					<mat-form-field class="form-field">
 						<input matInput placeholder="Search by name">
 					</mat-form-field>
 				</div>
@@ -33,12 +33,20 @@
 					{{ movie.name }}
 				</mat-card-title>
 			</mat-card-header>
-		
+
 			<mat-card-content>
 				<img [src]="'assets/images/movie-covers/' + movie.img">
+
+				<footer class="movie-card__tags">
+					<mat-chip-list>
+						<mat-chip *ngFor="let genre of movie.genres">
+							{{ genre }}
+						</mat-chip>
+					</mat-chip-list>
+				</footer>
 			</mat-card-content>
 		</mat-card>
-		
+
 
 	</div>
 

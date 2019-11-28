@@ -9,4 +9,12 @@
     img {
         width: 100%;
     }
+
+    &__tags {
+        margin-top: 20px;
+    }
+
+    .mat-chip {
+        cursor: pointer;
+    }
 }
