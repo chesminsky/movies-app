@@ -2,7 +2,7 @@
 
 	<mat-card-header>
 		<mat-card-title>
-            Movies application
+            Find you movie
         </mat-card-title>
 	</mat-card-header>
 
@@ -13,7 +13,7 @@
 
 				<div class="grid__item">
 					<mat-form-field class="fluid">
-						<input #name matInput placeholder="Search movie by name">
+						<input matInput placeholder="Search by name">
 					</mat-form-field>
 				</div>
 			</div>
@@ -21,3 +21,17 @@
 
 	</mat-card-content>
 </mat-card>
+
+<div class="grid mt-20">
+
+	<div class="grid__item" *ngFor="let movie of movies$ | async">
+
+		<!-- <-card [model]="user"></app-user-card> -->
+
+			<div>
+				{{ movie.name }}
+			</div>
+
+	</div>
+
+</div>
