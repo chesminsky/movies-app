@@ -1,15 +1,26 @@
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
 html, body {
 	height: 100%;
 }
+
 body {
 	margin: 0;
+	padding: 0;
 	font-family: Roboto, "Helvetica Neue", sans-serif;
 	background: #fafafa;
 }
 
 .container {
-	margin: 100px auto;
-	width: 1000px;
+	margin: 0 auto;
+    max-width: 1000px;
+	padding: 20px;
+	
+	@media screen and (min-width: $screen-lg-min) {
+		margin: 100px auto;
+	}
 }
 
 .form-field {
@@ -18,19 +29,26 @@ body {
 }
 
 .grid {
-
 	margin: 0 -20px;
-
 	display: flex;
-	align-items: flex-start;
 	flex-wrap: wrap;
-
 }
 
 .grid__item {
 	padding: 0 20px;
-	width: calc(100%/4);
 	box-sizing: border-box;
+
+	@media screen and (min-width: $screen-sm-min) {
+		width: 100%;
+	}
+
+	@media screen and (min-width: $screen-md-min) {
+		width: calc(100%/2);
+	}
+
+	@media screen and (min-width: $screen-lg-min) {
+		width: calc(100%/4);
+	}
 }
 
 .mt-20 {
