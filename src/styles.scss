@@ -1,4 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	background: #fafafa;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container {
+	margin: 100px auto;
+	width: 1000px;
+}
+
+.fluid {
+	width: 100%;
+}
+
+.grid {
+
+	margin: 0 -20px;
+
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+
+}
+
+.grid__item {
+	float: left;
+	padding: 0 20px;
+	width: calc(100%/3);
+	box-sizing: border-box;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
