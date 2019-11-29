@@ -14,18 +14,26 @@
         </p>
 
         <p>
-            Rate: {{ movie.rate }}
+         {{ movie.rate }}
         </p>
 
         <p>
-            Length: {{ movie.length }}
+            <i class="material-icons">access_time</i> {{ movie.length }}
         </p>
 
-        <mat-chip-list>
-            <mat-chip *ngFor="let genre of movie.genres">
-                {{ genre }}
-            </mat-chip>
-        </mat-chip-list>
+        <footer>
+
+            <div class="genres">
+                Genres: 
+            </div>
+
+            <mat-chip-list>
+                <mat-chip *ngFor="let genre of movie.genres">
+                    {{ genre }}
+                </mat-chip>
+            </mat-chip-list>
+        </footer>
+
 
     </div>
 </mat-card>
