@@ -26,7 +26,7 @@
 
 	<div class="grid__item" *ngFor="let movie of movies$ | async">
 
-		<mat-card class="movie-card">
+		<mat-card class="movie-card" [routerLink]="[movie.id]">
 
 			<mat-card-header class="movie-card__header">
 				<mat-card-title>

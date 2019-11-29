@@ -5,6 +5,11 @@
 .movie-card {
 
     margin-bottom: 40px;
+    cursor: pointer;
+    transition: .3s ease all;
+    &:hover {
+        transform: scale(1.05);
+    }
 
     img {
         width: 100%;
