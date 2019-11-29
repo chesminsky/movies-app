@@ -7,16 +7,16 @@ You have a great idea for a new movies collection application. Your new site wil
 ### Application should contain the below features
 
 - **Movies List**
-  - List Movies
+  - List Movies (+)
   - Search
-  - Clicking on a particular movie will redirect you to the selected &#39;movie detail&#39; page
+  - Clicking on a particular movie will redirect you to the selected &#39;movie detail&#39; page (+)
 - **Movie detail**
-  - Show selected movie detail information
-  - Navigate back to &#39;movie list&#39;
+  - Show selected movie detail information (+)
+  - Navigate back to &#39;movie list&#39; (+)
 
 #### Pages should have proper urls and navigation should work as expected:
-  * using the back and forward button of the browser should take to the correct page
-  * reloading the current page should work as expected
+  * using the back and forward button of the browser should take to the correct page (+)
+  * reloading the current page should work as expected (+)
 
 #### Technologies required
 
@@ -32,9 +32,9 @@ You may use any 3rd party libraries which can facilitate your development.
 - Filter by Genre
 - Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitates your development
 - Unit tests
-- Polished design
-- Responsive design
-- Animations
+- Polished design (+)
+- Responsive design (+)
+- Animations (+)
 
 If you get the demo in good shape and have extra time, add your own flair and features.
 
