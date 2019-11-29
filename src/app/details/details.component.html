@@ -1,5 +1,9 @@
 <mat-card class="movie-page" *ngIf="(movie$ | async) as movie">
 
+    <div class="back" (click)="back()">
+        <i class="material-icons">arrow_back</i> 
+    </div>
+
     <div class="movie-page__cover">
         <img [src]="'assets/images/movie-covers/' + movie.img">
     </div>
@@ -20,7 +24,7 @@
             <div #rater [attr.rate]="movie.rate"></div>
         </div>
 
-        <p>
+        <p class="length">
             <i class="material-icons">access_time</i> {{ movie.length }}
         </p>
 

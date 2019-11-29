@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MoviesService } from '../shared/services/movies.service';
 import { Observable } from 'rxjs';
 import { Movie } from '../shared/models/movie.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import rater from 'rater-js';
 
 @Component({
@@ -29,12 +29,17 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private moviesService: MoviesService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.params.id);
     this.movie$ = this.moviesService.get(id);
+  }
+
+  public back() {
+    this.router.navigate(['']);
   }
 
 }

@@ -1,6 +1,4 @@
-$screen-sm-min: 768px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
+@import "variables";
 
 html, body {
 	height: 100%;
@@ -21,11 +19,6 @@ body {
 	margin: 0 auto;
     max-width: 1000px;
 	padding: 20px;
-	
-	@media screen and (min-width: $screen-lg-min) {
-		margin: 0 auto;
-		padding: 100px 0;
-	}
 }
 
 .form-field {
@@ -42,18 +35,16 @@ body {
 .grid__item {
 	padding: 0 20px;
 	box-sizing: border-box;
+	width: 100%;
 
 	@media screen and (min-width: $screen-sm-min) {
-		width: 100%;
-	}
-
-	@media screen and (min-width: $screen-md-min) {
 		width: calc(100%/2);
 	}
 
-	@media screen and (min-width: $screen-lg-min) {
+	@media screen and (min-width: $screen-md-min) {
 		width: calc(100%/4);
 	}
+
 }
 
 .mt-20 {
