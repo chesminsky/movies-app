@@ -25,7 +25,12 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.movies$ = this.movieService.searchByName(this.search.valueChanges);
+    this.movies$ = this.movieService.filter(this.search.valueChanges, this.genres.valueChanges);
+  }
+
+  public clearFilter() {
+    this.search.setValue('');
+    this.genres.setValue([]);
   }
 
 }

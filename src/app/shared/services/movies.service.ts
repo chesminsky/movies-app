@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import movies from '../mocks/movie.mock-data.json';
-import { Observable, of } from 'rxjs';
+import { Observable, of, combineLatest } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith } from 'rxjs/operators';
 import { Movie } from '../models/movie.model';
 
@@ -11,28 +11,32 @@ export class MoviesService {
 
   constructor() { }
 
-  public getAll(): Observable<Array<Movie>> {
-    return of(movies);
-  }
-
   public get(id: number): Observable<Movie> {
     const movie = movies.find((m) => m.id === id);
     return of(movie);
   }
 
-  public searchByName(term$: Observable<string>): Observable<Array<Movie>> {
-    return term$.pipe(
-      startWith(''),
-      debounceTime(400),
-      distinctUntilChanged(),
-      map((term) => {
+  public filter(term$: Observable<string>, genres$: Observable<string[]>): Observable<Array<Movie>> {
+    return combineLatest(
+      term$.pipe(
+        startWith(''),
+        debounceTime(400),
+        distinctUntilChanged()
+      ),
+      genres$.pipe(
+        startWith([])
+      )
+    ).pipe(
+      map(([term, genres]) => {
 
-        if (!term) {
+        if (!term && genres.length === 0) {
           return movies;
         }
 
         return movies.filter((m) => {
-          return m.name.toLowerCase().includes(term.toLowerCase());
+          return term ? m.name.toLowerCase().includes(term.toLowerCase()) : true;
+        }).filter((m) => {
+          return genres.length ? genres.every((g) => m.genres.includes(g)) : true;
         });
       })
     );
