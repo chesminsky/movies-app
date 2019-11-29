@@ -13,13 +13,18 @@ body {
 	background: #fafafa;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 .container {
 	margin: 0 auto;
     max-width: 1000px;
 	padding: 20px;
 	
 	@media screen and (min-width: $screen-lg-min) {
-		margin: 100px auto;
+		margin: 0 auto;
+		padding: 100px 0;
 	}
 }
 

@@ -13,17 +13,19 @@
             {{ movie.description }}
         </p>
 
-        <p>
-         {{ movie.rate }}
-        </p>
+        <div class="rating">
+            <div class="rating__header">
+                Rating:
+            </div>
+            <div #rater [attr.rate]="movie.rate"></div>
+        </div>
 
         <p>
             <i class="material-icons">access_time</i> {{ movie.length }}
         </p>
 
-        <footer>
-
-            <div class="genres">
+        <footer class="genres">
+            <div class="genres__header">
                 Genres: 
             </div>
 
