@@ -56,7 +56,7 @@
 
 				<footer class="movie-card__tags">
 					<mat-chip-list>
-						<mat-chip *ngFor="let genre of movie.genres">
+						<mat-chip *ngFor="let genre of movie.genres" (click)="searchByTag(genre)">
 							{{ genre }}
 						</mat-chip>
 					</mat-chip-list>

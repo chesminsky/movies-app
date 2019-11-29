@@ -8,7 +8,7 @@ You have a great idea for a new movies collection application. Your new site wil
 
 - **Movies List**
   - List Movies (+)
-  - Search
+  - Search (+)
   - Clicking on a particular movie will redirect you to the selected &#39;movie detail&#39; page (+)
 - **Movie detail**
   - Show selected movie detail information (+)
@@ -20,16 +20,16 @@ You have a great idea for a new movies collection application. Your new site wil
 
 #### Technologies required
 
-- [Angular](https://angular.io/) (6 or higher)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Rxjs](https://github.com/ReactiveX/rxjs)
-- [Sass](http://sass-lang.com/)
+- [Angular](https://angular.io/) (6 or higher) (+)
+- [TypeScript](https://www.typescriptlang.org/) (+)
+- [Rxjs](https://github.com/ReactiveX/rxjs) (+)
+- [Sass](http://sass-lang.com/) (+)
 
 You may use any 3rd party libraries which can facilitate your development.
 
 #### Extra Credit
 
-- Filter by Genre
+- Filter by Genre (+)
 - Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitates your development
 - Unit tests
 - Polished design (+)
@@ -55,8 +55,8 @@ skeleton or starter project.
 
 #### Deliverable
 
-- Provide a working application
-- Provide source code in a public Git, Stash or Bitbucket repository
+- Provide a working application (+)
+- Provide source code in a public Git, Stash or Bitbucket repository (+)
 - Provide markdown readme file
   - General information about the app
   - Provide steps how to build/launch your application

@@ -33,4 +33,10 @@ export class ListComponent implements OnInit {
     this.genres.setValue([]);
   }
 
+  public searchByTag(genre: string) {
+    const existed = this.genres.value || [];
+    existed.push(genre);
+    this.genres.setValue(existed);
+  }
+
 }
