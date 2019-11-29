@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from '../shared/services/movies.service';
+import { Observable } from 'rxjs';
+import { Movie } from '../shared/models/movie.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  public movie$: Observable<Movie>;
+
+  constructor(
+    private moviesService: MoviesService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    const id = Number(this.route.snapshot.params.id);
+    this.movie$ = this.moviesService.get(id);
   }
 
 }

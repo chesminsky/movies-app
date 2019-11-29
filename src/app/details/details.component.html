@@ -1,1 +1,31 @@
-<p>details works!</p>
+<mat-card class="movie-page" *ngIf="(movie$ | async) as movie">
+
+    <div class="movie-page__cover">
+        <img [src]="'assets/images/movie-covers/' + movie.img">
+    </div>
+
+    <div class="movie-page__main">
+        <h1>
+            {{ movie.name }}
+        </h1>
+
+        <p>
+            {{ movie.description }}
+        </p>
+
+        <p>
+            Rate: {{ movie.rate }}
+        </p>
+
+        <p>
+            Length: {{ movie.length }}
+        </p>
+
+        <mat-chip-list>
+            <mat-chip *ngFor="let genre of movie.genres">
+                {{ genre }}
+            </mat-chip>
+        </mat-chip-list>
+
+    </div>
+</mat-card>
