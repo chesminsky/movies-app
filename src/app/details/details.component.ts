@@ -15,16 +15,12 @@ export class DetailsComponent implements OnInit {
   public movie$: Observable<Movie>;
 
   @ViewChild('rater', { static: false }) set content(elRef: ElementRef) {
-
-    const element = elRef.nativeElement;
-    const rating = element.getAttribute('rate');
-    const raterElement = rater({
-      element,
+    rater({
+      element: elRef.nativeElement,
       max: 10,
       starSize: 24,
       readOnly: true
     });
-    raterElement.setRating(Number(rating));
   }
 
   constructor(
