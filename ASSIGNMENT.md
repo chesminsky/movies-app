@@ -31,7 +31,7 @@ You may use any 3rd party libraries which can facilitate your development.
 
 - Filter by Genre (+)
 - Apply [Redux](http://redux.js.org/) application state management to your application. You may use any 3rd party libraries which can facilitates your development
-- Unit tests
+- Unit tests (+)
 - Polished design (+)
 - Responsive design (+)
 - Animations (+)
@@ -57,8 +57,8 @@ skeleton or starter project.
 
 - Provide a working application (+)
 - Provide source code in a public Git, Stash or Bitbucket repository (+)
-- Provide markdown readme file
-  - General information about the app
-  - Provide steps how to build/launch your application
+- Provide markdown readme file (+)
+  - General information about the app (+)
+  - Provide steps how to build/launch your application (+)
 
 Goodluck!

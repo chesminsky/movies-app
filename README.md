@@ -1,5 +1,8 @@
 # MoviesApp
 
+This is the movies application, where you can find a movie by name or by genre and view its detailed information.  
+Live demo can be found here https://chesminsky.github.io/movies-app/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
 ## Development server
