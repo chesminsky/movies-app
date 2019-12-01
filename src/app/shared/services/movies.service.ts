@@ -9,10 +9,12 @@ import { Movie } from '../models/movie.model';
 })
 export class MoviesService {
 
+  public movies: Array<Movie> = movies;
+
   constructor() { }
 
   public get(id: number): Observable<Movie> {
-    const movie = movies.find((m) => m.id === id);
+    const movie = this.movies.find((m) => m.id === id);
     return of(movie);
   }
 
@@ -29,11 +31,7 @@ export class MoviesService {
     ).pipe(
       map(([term, genres]) => {
 
-        if (!term && genres.length === 0) {
-          return movies;
-        }
-
-        return movies.filter((m) => {
+        return this.movies.filter((m) => {
           return term ? m.name.toLowerCase().includes(term.toLowerCase()) : true;
         }).filter((m) => {
           return genres.length ? genres.every((g) => m.genres.includes(g)) : true;
